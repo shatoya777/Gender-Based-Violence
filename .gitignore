@@ -1,13 +1,1 @@
-# Virtual Environments
-.myenv/
-myenv/
-**/.myenv/
-**/myenv/
-__pycache__/
-**/__pycache__/
 
-# Other common files to exclude
-.DS_Store
-.idea/
-.vscode/
-*.pyc
