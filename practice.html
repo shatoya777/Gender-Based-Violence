@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Gender‐Based Violence in South Asia</title>
+
+  <!-- ====== Google Font ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ====== Chart.js CDN ====== -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"
+    integrity="sha384-GOybkp2J+weYNh8Y2k+tLVx4lIGiMkOx3ZMFVRA/AS17zmdggAjqfNlFXP0fWjoc"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.6;
+      color: #4a1a1a; /* Dark maroon/brown text */
+      background-color: #fffdf9; /* Cream background */
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #7a1e1e; /* Maroon */
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffecec; /* Slightly lighter on hover */
+    }
+
+    /* ====== PAGE SPACING ====== */
+    main {
+      padding-top: 4rem; /* to offset fixed navbar */
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    section {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #7a1e1e; /* Maroon heading */
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* ====== SECTION IMAGES (OPTIONAL BACKGROUNDS) ====== */
+    .section-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+    }
+
+    /* ====== CONTENT BOXES ====== */
+    .content-box {
+      background-color: #fff; /* White box behind text */
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ====== GRAPH CONTAINER ====== */
+    .chart-container {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* Smooth scrolling anchor offset */
+    .anchor-offset {
+      display: block;
+      position: relative;
+      top: -3.5rem; /* Height of navbar + some cushion */
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ====== NAVIGATION ====== -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-brand">DGBV South Asia</div>
+      <div class="nav-links">
+        <a href="#weak-legal">Weak Legal Frameworks</a>
+        <a href="#social-stigma">Social Stigma & Victim Blaming</a>
+        <a href="#anti-feminist">Men’s Rights & Anti‐Feminist Movements</a>
+        <a href="#digital-feminism">Digital Feminism</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ====== SECTION: WEAK LEGAL FRAMEWORKS ====== -->
+    <section id="weak-legal">
+      <span class="anchor-offset" id="anchor-weak-legal"></span>
+      <h2>Weak Legal Frameworks</h2>
+
+      <!-- Optional Image Header -->
+      <img
+        src="https://via.placeholder.com/1000x250/7a1e1e/fff?text=Weak+Legal+Frameworks"
+        alt="Illustration: Scales of Justice"
+        class="section-image"
+      />
+
+      <div class="content-box">
+        <p>
+          In South Asia, legal frameworks addressing gender-based violence
+          (GBV) are often informed by patriarchal cultural norms that tether a
+          woman’s value to her perceived modesty and behavior. This socio-legal
+          construct positions women as bearers of familial honor, thereby
+          translating notions of modesty into legislative language that
+          centers protection over prevention through safeguarding “virtue”
+          within the community (Nainar, 2023).
+        </p>
+
+        <p>
+          Although India, Pakistan, and Bangladesh have all enacted laws aimed
+          at curbing Gender-Based Violence (GBV), they remain largely
+          ineffective due to the vague terminology and their prioritization of
+          protecting a woman’s honor, modesty, and social standing over
+          justice. This is not uncalled for since the gender imbalance in
+          legislative bodies further exacerbates these issues (Naraharisetty,
+          2022).
+        </p>
+
+        <p>
+          According to UN Women, only 15–20% of political positions in India and
+          Pakistan, and 20.9% in Bangladesh, are held by women, limiting female
+          perspectives in lawmaking and policymaking (UN Women, 2023; UN Women
+          Data Hub, 2024). In the absence of gender-inclusive governance, laws
+          designed to protect women are frequently authored and interpreted
+          through a male-centric lens, resulting in provisions that, while
+          well-intentioned, often serve to shield perpetrators and perpetuate
+          systemic inequality.
+        </p>
+
+        <p>
+          A prominent example is Section 354 in the Indian Penal Code (IPC)
+          pre-amendment 2013, which describes sexual assault as the intent to
+          outrage a woman’s modesty, providing loopholes for the offender to
+          argue that their victim does not hold a sense of modesty due to their
+          age, caste, or occupation. This was seen in
+          <em>State of Punjab v. Major Singh</em> (AIR 1967 SC 63), where a
+          sexual offender violated a 7.5-month-old victim, with the main
+          defense for the perpetrator being that ‘modesty’ was inapplicable due
+          to her age.
+        </p>
+
+        <p>
+          India has seen some reform in its laws in response to public outrage
+          over sexual violence cases over the years. While these amendments
+          appear to be protective, their language often reinforces patriarchal
+          norms by centering female “dignity” rather than autonomy. Section 509
+          of the IPC criminalizes acts that insult the “modesty” of a woman,
+          and Section 228-A can result in dehumanization, turning victims into
+          symbols of shame and sorrow rather than individuals with agency,
+          especially in cases where the victim has passed away and cannot
+          reclaim her narrative.
+        </p>
+
+        <p>
+          Similarly, Pakistan’s Prevention of Electronic Crimes Act (PECA) of
+          2016 is hindered by ambiguous wording and excessive emphasis on
+          “morality,” an undefined ideology, even when mentioned. While
+          theoretically it provides mechanisms to combat cyber harassment, its
+          enforcement is marred by a lack of police training in gender
+          sensitivity and digital literacy (Naseer & Ashraf, 2021), due to
+          which victims are often silenced by shame, fear, or intimidation from
+          law enforcement itself.
+        </p>
+
+        <p>
+          This incompetence in tackling gender-based violence is seen in the
+          2021 case of Marya Zulfiqar, where the Pakistan police force was
+          informed about her being threatened and accused of holding her at
+          gunpoint, after which the police made no effort to give her
+          protection or bring the accused in for questioning.
+        </p>
+
+        <p>
+          Legal amendments have also been seen in Pakistan, one being the
+          Protection of Women Criminal Laws (Amendment) Act 2006, which nominally
+          expanded protections but did so through the lens of controlling women’s
+          sexual behavior, rather than empowering victims or addressing systemic
+          inequalities.
+        </p>
+
+        <p>
+          Whereas in Bangladesh, steps are being taken to commence a law that
+          would benefit victims of cybercrimes such as deep fakes,
+          impersonation, and identity theft. The Cyber Security Act, 2023
+          (Act No. 39 of 2023) states that anyone who intentionally uses a
+          computer network or digital device to assume another person's identity
+          or present their personal information with intent to deceive or
+          defraud will face a penalty of up to 5 years in prison, or a fine of
+          0.5 million Taka (approximately 4,000 USD), or both (সাইবার নিরাপত্তা
+          আইন, ২০২৩, অধ্যায় ৬). In addition to the long legal processes, the
+          Cybersecurity Act of 2023 is yet to be finalised, which adds further
+          hurdles to those seeking justice.
+        </p>
+
+        <p>
+          Bangladesh witnessed its first case of celebrity deepfake in 2023 when
+          a sexually explicit video went viral across social media platforms,
+          with many falsely claiming that it featured the popular actress
+          Tanjin Tisha. Soon after, an online fact-checking and media research
+          organization by the name Dismislab confirmed that the video was a
+          fabrication. The footage belonged to a pornographic website and had
+          no connection to the actress. The digitally manipulated video using
+          deepfake technology produced a pornographic video that had Tanjin
+          Tisha’s face in another woman’s body (Hossaion, 2024). This incident
+          exposed the dangers and vulnerabilities against targeted gender-based
+          cyber violence in Bangladesh.
+        </p>
+
+        <p>
+          A similar case occurred with another actress, Sabnam Faria, who
+          publicly addressed the misuse of another person’s pictures digitally
+          altered and passed around as hers online. In a candid Facebook post on
+          March 31st 2024, she wrote in a resistant sarcastic yet defiant tone:
+          “For quite some time now, someone has been editing this person’s
+          pictures and putting my face on them, and posting them on Facebook. I
+          don’t know who these people are or what they want. Do you really have
+          such a strong desire to see me in shorts? When I travel abroad, I
+          already post photos wearing shorts! If those photos aren’t revealing
+          enough and that disappoints you, then I apologize! But now one of your
+          'big brothers' has gone and edited her photo with my face again!!!”
+          (Faria, 2024). Unfortunately her slamming remarks weren’t enough to
+          stop the culprits. Just a month later, on April 28th, she had to
+          address another case of impersonation of herself with an altered photo
+          of another person on her social media (Faria, 2024).
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Revenge Porn</h3>
+        <p>
+          One of the most prevalent forms of Digital Gender-Based Violence is
+          Revenge Porn, defined by Merriam-Webster’s dictionary as “sexually
+          explicit images of a person posted online without that person’s
+          consent especially as a form of revenge or harassment” (Merriam-Webster
+          Dictionary, 2015). This form of digital abuse is used to weaponize and
+          dehumanize women, signaling their supposed sexual availability on the
+          internet.
+        </p>
+        <p>
+          The most common form of revenge porn in South-Asia is the perpetrator
+          impersonating the victim online, and creating fake profiles that share
+          sexualized imagery under the guise of the victim’s identity. It not
+          only violates a woman’s privacy but also directly threatens her
+          safety, izzat (reputation), and her life in society, where a woman’s
+          perceived “honor” is closely tied to her family’s dignity; being
+          falsely portrayed as promiscuous harms her and her family’s social
+          identity.
+        </p>
+        <p>
+          This phenomenon is seen through crimes like the circulation of revenge
+          porn of an ex-girlfriend in response to failed extortion by Bhubaneswar
+          in India (Mohapatra, 2024); blackmailing Sanam Maher by an ex-boyfriend
+          in Pakistan (Yousafzai, 2022); spreading intimate pictures by the fake
+          ID Shimanto Chowdhury in Bangladesh, show the victim’s invasion of
+          privacy by an entrusted ex-romantic partner. In all of these cases,
+          the perpetrator coerces the victim to comply with their demands or
+          face becoming a social pariah.
+        </p>
+        <p>
+          However, revenge porn can also stem from ostracism of individuals as
+          seen by the first case of revenge porn in India in 2001, which shows
+          that these crimes are not only related to unsuccessful romantic
+          relationships but also social ones. A 16-year-old student, who was
+          bailed for making a pornographic website of his classmates and
+          teachers, who socially ostracised him through provoking and poking fun
+          at him. The perpetrator was brought in for questioning and was
+          eventually bailed and rehabilitated, since the court deemed this case
+          as an example of ‘tech-graffiti’ similar to bathroom graffiti, as a
+          concern for his future and well-being.
+        </p>
+        <p>
+          As internet accessibility continues to expand, the number of reported
+          cases of digital gender-based violence in South Asia increased by 5%
+          — reaching 50,035 cases between 2020 and 2021, highlighting the
+          growing scope of this issue. Despite this rise, accessible and
+          reliable statistical data remain scarce, reflecting a broader
+          governmental lack of initiative and concern.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== SECTION: SOCIAL STIGMA & VICTIM BLAMING ====== -->
+    <section id="social-stigma">
+      <span class="anchor-offset" id="anchor-social-stigma"></span>
+      <h2>Social Stigma &amp; Victim Blaming</h2>
+
+      <!-- Optional Image Header -->
+      <img
+        src="https://via.placeholder.com/1000x250/7a1e1e/fff?text=Social+Stigma+%26+Victim+Blaming"
+        alt="Illustration: Silhouette of a woman facing multiple accusatory hands"
+        class="section-image"
+      />
+
+      <div class="content-box">
+        <p>
+          <strong>Izzat</strong>, which directly translates to honor or respect,
+          is a deeply rooted cultural concept in South Asia that represents
+          social standing (add more here, Aisha). This concept not only applies
+          to individuals but also to families aiming to maintain or elevate
+          their societal standing, especially for women, who are seen as the
+          custodians of honor through ideas of dignity, chastity, and moral
+          conduct. This linkage is reinforced through cultural norms, religious
+          interpretations, and social practices that prescribe strict codes of
+          conduct for women, thereby making female purity and dignity central to
+          collective honor.
+        </p>
+
+        <p>
+          As a result, women’s bodies and choices become sites of control and
+          surveillance in the name of protecting family or community prestige.
+          This regulation of women can be broadly categorized into two
+          interrelated forms: familial regulation and self-regulation. Familial
+          regulation usually encompasses external control by family members,
+          manifesting through restrictions online and offline on a woman’s
+          social interactions, mobility, and activity. In extreme cases, a woman
+          may be subjected to an “honor killing” or “karo-kari,” rooted in
+          patriarchal traditions where women are murdered by family members for
+          supposed dishonor, through disobedience. Some notable reasons include
+          refusing an arranged marriage, adopting Western lifestyles, or seeking
+          independence.
+        </p>
+
+        <p>
+          The case of Qandeel Baloch, a Pakistani social media personality whose
+          online presence challenged traditional norms, resulted in moral
+          policing and eventually her tragic murder on July 12, 2016, by her
+          brother (CITATION). Perpetrators such as Muhammad Waseem were later
+          pardoned by her mother under Section 311 of Pakistan’s Penal Code,
+          which allows a victim’s family to forgive the assailant—highlighting
+          how “honor” is used to undermine accountability.
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Consequences of Stigma</h3>
+        <p>
+          Despite the severity of these societal norms, religious communities
+          often frame these acts as “domestic issues,” promoting backward and
+          violently patriarchal ideals. Yet Ali &amp; Zafar (2020) argue that
+          these crimes are driven by social customs—not Islam. Family honor,
+          community pressure, and even admiration for the assailant’s “bravery”
+          combine to maintain these extremist practices.
+        </p>
+
+        <p>
+          As for comparatively “trivial” consequences, victims may face societal
+          restrictions and are often blamed for the crime and its consequences
+          due to their actions—whether being outspoken, dressed “immodestly,”
+          or walking without a male chaperone (Rawat, 2017). Hence, women facing
+          online abuse often refrain from reporting incidents out of fear of
+          causing family dishonor, withdrawing from digital platforms
+          altogether to protect their families from social scrutiny (Digital
+          Rights Foundation, 2020; Internet Democracy Project, 2019).
+        </p>
+
+        <p>
+          In extreme cases, the law enforcement’s failure to take swift and
+          exemplary action against online harm adds to the victim’s fear.
+          After a female student from Dhaka University was harassed for her
+          clothing, the perpetrator was released on bail within hours under
+          pressure from a religious political party. The victim’s personal
+          details were shared online, putting her family in immediate danger.
+          She said, “I worry whether the state will provide enough security for
+          me. I saw the accused being greeted with flowers, while I feel I have
+          to cover my face if I leave the house. What would be the point in
+          continuing this case?” (The Daily Star, 2025).
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">
+          Psychological Impact and Self‐Blame
+        </h3>
+        <p>
+          In the circumstance of losing control over their narrative, social
+          ideologies like victim blaming cause extreme psychological distress
+          through societal alienation and deep‐rooted guilt—resulting in the
+          individual blaming themselves instead of the perpetrators. This can
+          manifest as anxiety, depression, and PTSD, contributing to a
+          disrupted self‐concept clarity (Ali, 2025; Halder &amp; Jaishankar,
+          2013).
+        </p>
+
+        <p>
+          Digital platforms worsen this dynamic by enabling repeated exposure
+          and secondary victimization, reinforcing misogynistic stereotypes and
+          social stigmas (Tonny &amp; Nawaz, 2025; Naseet &amp; Ashrad, 2022).
+          This vicious cycle normalizes harassment within social and online
+          settings, leaving women emotionally burdened by constant threats to
+          their safety (Chinchu, 2024; Bessant &amp; Watts, 2021).
+        </p>
+
+        <p>
+          A longitudinal study of 100 sexually abused adolescent girls found
+          that feelings of shame predicted PTSD symptoms six months later, while
+          self‐blame strongly correlated with severe depression. Avoidance
+          coping (suppressing emotions) and ongoing depression contributed to
+          suicidal thoughts—over half of the participants reported suicidal
+          ideation. Six months later, nearly half had PTSD symptoms, over a
+          third faced depression, and 30% reported suicidal thoughts (Alix
+          et al., 2020).
+        </p>
+
+        <!-- ====== BAR CHART ====== -->
+        <div class="chart-container">
+          <canvas id="symptomChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SECTION: MEN’S RIGHTS & ANTI‐FEMINIST MOVEMENTS ====== -->
+    <section id="anti-feminist">
+      <span class="anchor-offset" id="anchor-anti-feminist"></span>
+      <h2>Men’s Rights &amp; Anti‐Feminist Movements</h2>
+
+      <!-- Optional Image Header -->
+      <img
+        src="https://via.placeholder.com/1000x250/7a1e1e/fff?text=Men%E2%80%99s+Rights+%26+Anti-Feminist+Movements"
+        alt="Illustration: Silhouettes clashing in a digital space"
+        class="section-image"
+      />
+
+      <div class="content-box">
+        <p>
+          The culture of silence and blame is further weaponized in digital
+          spaces, where the rhetoric of the Men’s Rights Movement (MRM) in India
+          reframes victims of sexual assault as manipulative and perpetrators
+          as victims of a “biased system”; referring to several sections of the
+          Indian constitution as “made for the protection of women” despite the
+          inherently patriarchal structure of Indian society. These criticisms
+          of the law and its enforcers are especially magnified in cases of
+          custody, alimony, divorce, and domestic violence (Desai, 2023).
+          What began as a purported defense of men’s legal rights has
+          increasingly devolved into a justification for misogyny, the dismissal
+          of gender-based violence, and the vilification of feminism.
+        </p>
+
+        <p>
+          The evolution of Web 2.0 saw the growth of platforms like Reddit,
+          YouTube, and Instagram, giving a platform for open communication to
+          the public and allowing MRM ideologies to take root in anonymous
+          online spaces (Desai, 2023). While the manosphere rhetoric originated
+          in the West, in South Asia—particularly India—it is shaped by
+          socio-religious conservatism and linguistic diversity. A notable
+          concept they use is the idea of the <em>Adarsh Bhartiya Nari</em>,
+          which translates to the Ideal Indian Woman, who is a submissive
+          female archetype, devoutly imbues Indian values to frame feminism as a
+          threat to national culture and morality (Priya &amp; Sigamany,
+          2025).
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Explicit vs. Implicit Misogyny</h3>
+        <p>
+          Online misogyny in these regions often manifests in two forms:
+          explicit and implicit. Waseem et al. (2017) classify explicit misogyny
+          as personal insults to the victim using sexually derogatory targeted
+          speech. An example of explicit misogyny is the online harassment Rhea
+          Chakraborty faced following Sushant Singh Rajput’s 2020 suicide.
+          She was branded a “gold digger” and blamed for his death—despite the
+          lack of evidence. In a study examining 2,128 tweets with relevant
+          hashtags to the case, the majority contained misogynistic remarks
+          toward Chakraborty (Nanditha et al., 2023).
+        </p>
+
+        <p>
+          On the other hand, implicit misogyny operates through sarcasm,
+          cynicism, and subtle accusations (Waseem et al., 2017). Influencer
+          Apoorva Mukhija, who had a viral altercation on a talent show called
+          “India’s Got Latent,” faced rape, acid attack, and death threats. On
+          April 8, 2025, she posted on Instagram titled “and that’s not even
+          1%,” sharing uncensored comments she received after the incident.
+          Although her supporters offered positivity, many comments resorted to
+          sarcasm, speculation, and insinuation—implying she only revealed the
+          threats to gain sympathy and downplay the severity of the harassment.
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Weaponizing Misinformation</h3>
+        <p>
+          The deliberate exaggeration and weaponization of misinformation by
+          red-pill influencers cultivates mistrust toward women and dilutes
+          public empathy toward victims. By selectively amplifying the
+          occurrence of false accusations, these individuals fuel a broader
+          ecosystem of doubt and misogyny. Their aim is not factual discourse
+          but rather disregarding structural gender-based violence and
+          reframing male discomfort with shifting gender norms as victimhood.
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Bollywood &amp; Regional Cinema</h3>
+        <p>
+          Cinema in the Indian subcontinent holds deep cultural significance,
+          particularly for the middle class, influencing values, identity, and
+          gender norms. A key example is the ideal of the <em>Adarsh Bhartiya
+          Nari</em> (Ideal Indian Woman), heavily promoted by early Bollywood
+          films. These narratives often placed the burden of preserving purity —
+          and by extension, the nation’s honor — on women. This is clearly seen
+          in the blockbuster movie <em>Dilwale Dulhania Le Jayenge</em>. Such
+          tropes reduce women to submissive “damsels in distress,” told through
+          the lens of a dominant male hero.
+        </p>
+
+        <p>
+          Even today, films like <em>Kabir Singh</em> (2019) and
+          <em>Animal</em> (2023), directed by Sandeep Reddy Vanga, portray
+          misogynistic and hyper‐masculine characters whose abusive behavior is
+          glorified (Khan &amp; Taylor, 2023). Despite some progress toward
+          more nuanced female roles, mainstream Bollywood continues to objectify
+          women through “item songs” and female characters whose worth is tied
+          to male redemption (Shewade, 2023).
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Pakistani &amp; Bangladeshi Media</h3>
+        <p>
+          In Pakistan, mainstream dramas often trivialize domestic abuse,
+          pitting women against each other, portraying them as “evil” or
+          “promiscuous,” and glorifying patriarchal values (Khan, 2020).
+          Ahmar, director of Uks (media advocacy in Pakistan), states:
+          “99.9% of dramas on Pakistani television channels are ‘sexist,
+          repressive, and regressive’” (Sarfaraz, 2020). Even when some dramas
+          push back, the broader industry continues to sideline strong female
+          characters and normalize misogyny.
+        </p>
+
+        <p>
+          Bangladeshi cinema similarly often reduces women to caregivers, victims,
+          or objects of desire. Films such as <em>Valobashlei Ghor Bandha Jay
+          Na</em> and <em>Poramon 2</em> depict female protagonists subjected
+          to violence or exploitation. The “dumb woman” trope dehumanizes women
+          by portraying them as naive or weak (Chacchu, 2006; Apu Biswas’s
+          character). Such portrayals normalize violence and perpetuate
+          misogynistic narratives.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== SECTION: DIGITAL FEMINISM & COUNTER‐ACTIVISM ====== -->
+    <section id="digital-feminism">
+      <span class="anchor-offset" id="anchor-digital-feminism"></span>
+      <h2>Digital Feminism &amp; Counter‐Activism</h2>
+
+      <!-- Optional Image Header -->
+      <img
+        src="https://via.placeholder.com/1000x250/7a1e1e/fff?text=Digital+Feminism+%26+Counter-Activism"
+        alt="Illustration: Female silhouettes raising digital shields"
+        class="section-image"
+      />
+
+      <div class="content-box">
+        <p>
+          Collective activism and feminist identification have proven effective
+          at redirecting shame away from victims and toward perpetrators,
+          providing community support (Dey, 2019). Digital feminism in South
+          Asia leverages platforms like Twitter, Instagram, and YouTube to
+          amplify women’s voices, share resources, and build solidarity.
+        </p>
+
+        <p>
+          Hashtags like <strong>#MeTooIndia</strong> and <strong>#DigitalIzzat</strong>
+          have mobilized thousands to share personal testimonies, demand legal
+          reform, and hold perpetrators accountable. Feminist collectives host
+          online workshops about digital safety, self‐defense, and reporting
+          procedures. They also partner with legal aid organizations to provide
+          pro bono counsel to survivors of DGBV.
+        </p>
+
+        <p>
+          In Bangladesh, groups such as <em>Protichi</em> and <em>Priti+</em>
+          curate fact‐checked resources about cyber harassment and share
+          step‐by‐step guides for filing police complaints under the new
+          Cybersecurity Act (2023). They run “#NoMoreSilence” campaigns,
+          urging young women to refuse self‐censorship and speak openly about
+          their experiences.
+        </p>
+
+        <p>
+          In Pakistan, <em>War Against Rape</em> and <em>CyberTehrik</em> use
+          Twitter threads, live webinars, and digital petitions to pressure
+          lawmakers for stricter enforcement of PECA and gender‐sensitive police
+          training. They also train grassroots volunteers in rural areas to
+          help survivors document online abuse and navigate the legal system.
+        </p>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Key Strategies</h3>
+        <ul style="margin-left: 1rem; margin-top: 1rem; margin-bottom: 1rem; list-style-type: disc;">
+          <li>
+            <strong>Hashtag Activism:</strong> Mobilize testimony-sharing via
+            <em>#MeTooSouthAsia</em>, <em>#DigitalIzzat</em>, <em>#NotYourIzzat</em>.
+          </li>
+          <li>
+            <strong>Digital Self‐Defense Training:</strong> Partner with tech
+            collectives to teach encryption, anonymized reporting, and evidence
+            preservation.
+          </li>
+          <li>
+            <strong>Online Legal Clinics:</strong> Create Zoom/Google Meet
+            webinars where pro bono lawyers walk survivors through filing
+            complaints and getting protection orders.
+          </li>
+          <li>
+            <strong>Collaborations with Influencers:</strong> Work with
+            high‐reach feminist influencers to run micro‐campaigns on YouTube
+            and Instagram Reels debunking rape myths and calling out digital
+            abusers.
+          </li>
+          <li>
+            <strong>Media Monitoring:</strong> Track mainstream media and
+            film/television for harmful stereotypes, then publish counter‐
+            analyses in digital newsletters and collaborative Google Docs
+            (open to civil society groups).
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 2rem; color: #7a1e1e;">Conclusion</h3>
+        <p>
+          Digital feminism and counter‐activism are critical to dismantling
+          patriarchal narratives online. By building supportive networks,
+          offering legal resources, and challenging misogynistic media, South
+          Asian feminist activists have begun to shift public discourse toward
+          accountability, empathy, and structural change. The journey is far
+          from over, but these grassroots efforts demonstrate that collective
+          digital resistance can reshape entire cultural paradigms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      &copy; 2025 DGBV South Asia Research • All Rights Reserved
+    </footer>
+  </main>
+
+  <!-- ====== Chart.js SCRIPT ====== -->
+  <script>
+    // Bar chart data for psychological symptom percentages:
+    const ctx = document.getElementById("symptomChart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["PTSD Symptoms", "Depression", "Suicidal Thoughts"],
+        datasets: [
+          {
+            label: "Percentage of Participants",
+            data: [50, 33, 30],
+            backgroundColor: ["rgba(122, 30, 30, 0.8)", "rgba(122, 30, 30, 0.8)", "rgba(122, 30, 30, 0.8)"],
+            borderColor: ["rgba(122, 30, 30, 1)", "rgba(122, 30, 30, 1)", "rgba(122, 30, 30, 1)"],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 60,
+            title: {
+              display: true,
+              text: "Percentage (%)",
+              color: "#4a1a1a",
+              font: {
+                weight: "600",
+                size: 14
+              }
+            },
+            ticks: {
+              stepSize: 10
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: "Type of Symptom",
+              color: "#4a1a1a",
+              font: {
+                weight: "600",
+                size: 14
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: "Psychological Symptom Prevalence Among Sexually Abused Adolescent Girls",
+            color: "#7a1e1e",
+            font: {
+              weight: "700",
+              size: 18
+            },
+            padding: {
+              top: 10,
+              bottom: 20
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
