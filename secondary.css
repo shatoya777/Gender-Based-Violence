@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Soage';
+    src: url('Soage PersonalUseOnly.ttf');
+}
+@font-face {
+    font-family: 'Dream Orphans';
+    src: url('Dream Orphans.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7a1e1e;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffc4c4;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+/* Country Section Headers */
+.country-section {
+    margin: 4rem 0 2rem 0;
+}
+
+.country-header {
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+    border-bottom: 3px solid #ffc4c4;
+    text-align: center;
+}
+
+.country-title {
+    font-family: 'Soage', serif;
+    font-size: 2.5rem;
+    color: #710014;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+        0.025em 0.025em 0 rgba(255, 0, 0, 0.3),
+        0.025em 0.05em 0 pink,
+        0.07em 0.075em 0 #AB3130,
+        0.1em 0.1em 0 beige;
+}
+
+/* Section Styles */
+.person-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.person-section:nth-child(even) {
+    grid-template-columns: 1fr 300px;
+}
+
+.person-section:nth-child(even) .person-content {
+    order: -1;
+}
+
+/* Image Styles */
+.person-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: -15px -15px 0px #710014;
+    transition: transform 0.3s ease;
+}
+
+.person-image:hover {
+    transform: translateY(-5px);
+}
+
+/* Content Styles */
+.person-content {
+    padding: 1rem;
+}
+
+.person-title {
+    color: #710014;
+    font-family: 'Soage', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow:
+        0.025em 0.025em 0 rgba(255, 0, 0, 0.3),
+        0.025em 0.05em 0 pink,
+        0.07em 0.075em 0 #AB3130,
+        0.1em 0.1em 0 beige;
+    position: relative;
+}
+
+.person-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #710014, #ffc4c4);
+    animation: slideIn 2s ease-out;
+}
+
+.person-description {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+}
+
+/* Quote Styles */
+.quote-container {
+    background: linear-gradient(135deg, #ffc4c4, #ffebeb);
+    border-left: 5px solid #710014;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+    font-family: 'Dream Orphans', serif;
+    font-size: 1.1rem;
+    color: #7f1b27;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    text-shadow: 0.025em 0.025em 0 rgba(176, 58, 58, 0.3);
+}
+
+.quote-author {
+    font-family: 'Soage', serif;
+    color: #7b0b27;
+    font-weight: bold;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* References Section */
+.references-section {
+    background: linear-gradient(135deg, #7a1e1e, #5a1515);
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.references-title {
+    font-family: 'Soage', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fef6f7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.references-list {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Dream Orphans', serif;
+    line-height: 1.8;
+}
+
+.reference-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffc4c4;
+    transition: background 0.3s ease;
+}
+
+.reference-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.reference-number {
+    font-weight: bold;
+    color: #ffc4c4;
+    margin-right: 0.5rem;
+}
+
+.reference-link {
+    color: #ffebeb;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.reference-link:hover {
+    color: #ffc4c4;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .person-section,
+    .person-section:nth-child(even) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .person-section:nth-child(even) .person-content {
+        order: 0;
+    }
+
+    .person-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .references-section {
+        padding: 2rem 1rem;
+    }
+
+    .references-title {
+        font-size: 2rem;
+    }
+
+    .country-title {
+        font-size: 2rem;
+    }
+
+    .country-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

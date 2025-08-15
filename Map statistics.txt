@@ -1,0 +1,64 @@
+﻿Map details:
+
+India (Rate of total crime against women, rate):
+
+
+North Zone: 74.85 #5E1914
+South Zone: 74.56 #800000
+East Zone: 55.0 #960019
+West Zone: 49.0 #B22222
+Central Zone: 68.5 #8D021F
+Northeast Zone: 38.0 #CD5C5C
+
+
+
+
+Exceptionally high: (95-119) #420D09
+
+
+1. Andhra
+2. Odisha
+3. Haryana
+4. Rajastan
+5. Delhi
+6. Telengana
+
+
+Bangladesh (Domestic physical violence, percentage)
+
+
+5-10% #CD5C5C
+10-15% #B22222
+15-20% #800000 
+20%  #420D09
+
+
+
+
+ Barishal
+	 (8.81)
+	 Chattogram
+	(17.46)
+	 Dhaka
+	(20.34)
+	 Khulna
+	(16.48)
+	 Mymenshing
+	(5.15)
+	 Rajshahi
+	(12.4)
+	 Rangpur
+	(12.58)
+	 Sylhet
+	(6.78)
+	
+
+
+
+
+
+Pakistan (Gender Based Violence, cases):
+Punjab: 26,753 #420D09
+Khyber Pakhtunkhwa: 3,397 #800000
+Sindh: 1,781 #B22222
+Balochistan: 398 #CD5C5C

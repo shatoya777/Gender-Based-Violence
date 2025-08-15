@@ -1,0 +1,709 @@
+/* ====== GLOBAL STYLES ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #641f1f;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #641f1f;
+  background-color: #faf0f0;
+  background-size: 800% 800%;
+  scroll-behavior: smooth;
+  animation: animationss 5s infinite alternate;
+}
+
+
+
+.div-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* .left-wrap, .right-wrap {
+   background-image: url('Weak Legal Frameworks.png');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    width: 100vw;
+} */
+.left-wrap{
+    width: 33%;
+}
+
+.right-wrap{
+    width: 33%;
+}
+
+/* .left-image{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    mask-image: linear-gradient(to right , black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    transition: background-image 0.5s ease-in-out;  
+    background-image: url('Weak Legal Frameworks.png');
+    background-position: center;
+    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.right-image{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    mask-image: linear-gradient(to right , black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    transition: background-image 0.5s ease-in-out;  
+    background-image: url('Weak Legal Frameworks.png');
+    background-position: center;
+} */
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== NAVBAR ====== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #641f1f;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Playfair Display", serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffecec;
+}
+
+.nav-logo img{
+  height: 50px;
+  width:auto;
+  margin-right: 1rem;
+}
+
+
+
+/* ====== PAGE SPACING ====== */
+main {
+  padding-top: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-grow: 1;
+}
+
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+  padding: 2rem 0;
+}
+
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #641f1f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section h2.heading-with-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* ====== SECTION IMAGES ====== */
+.section-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+/* ====== CONTENT BOXES ====== */
+.content-box {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== GRAPH CONTAINER ====== */
+.chart-container {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  height: 300px;
+  padding: 0;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ====== Anchor Offset ====== */
+.anchor-offset {
+  display: block;
+  position: relative;
+  top: -3.5rem;
+  visibility: hidden;
+}
+
+/* ====== Chart Animation Trigger ====== */
+#parliament-chart-trigger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#parliament-chart-trigger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#india-map path {
+  stroke: #fff;
+  stroke-width: 0.5;
+  transition: fill 0.2s, opacity 0.2s;
+}
+
+/* India Zone Colors */
+.zone.north      { fill: #47130f; }
+.zone.south      { fill: #6b0505; }
+.zone.east       { fill: #a5051f; }
+.zone.west       { fill: #B22222; }
+.zone.central    { fill: #81041f; }
+.zone.northeast  { fill: #CD5C5C; }
+
+/* “Exceptionally High” overrides */
+.zone.exceptional { fill: #420D09 !important; }
+
+#india-map path:hover {
+  opacity: 0.8;
+  stroke: black;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+/* Pakistan Zone Colors */
+.Balochistan { fill: #a5051f;}
+.Gilgit-Baltistan { fill: #B22222;}
+.Punjab { fill: #47130f;}
+.Khyber-Pakhtunkhwa { fill: #6b0505;}
+.Sindh { fill: #8D021F;}
+.Islamabad { fill: #CD5C5C;}
+.Tribal-Areas { fill: grey;}
+.Azad-Kashmir { fill: grey;}
+
+#pakistan-map path:hover{
+  opacity: 0.8;
+  stroke: black;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+/* Bangladesh Zone Colors */
+.Barisal { fill: #a5051f;}
+.Chittagong { fill: #5b1212;}
+.Dhaka{fill: #47130f;}
+.Khulna { fill: #690000;}
+.Mymensingh { fill: #CD5C5C;}
+.Rajshahi { fill: #8D021F;}
+.Rangpur { fill: #752525;}
+.Sylhet { fill: #B22222;}
+
+#bangladesh-map path:hover{
+  opacity: 0.8;
+  stroke: black;
+  stroke-width: 1;
+  cursor: pointer;
+}
+/*Tooltip*/
+.tooltip{
+  position: fixed;
+  background: black;
+  color: #F2F0EF;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+/*Collage*/
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 2 / 1; /* Keeps a fixed proportion for the whole grid */
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffdf9;
+  text-align: center;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.text-overlay h1 {
+  margin: auto;
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* scales with screen */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    aspect-ratio: auto; /* let it stack vertically */
+    height: auto;
+  }
+}
+
+
+/*====================Professional heading icons*/
+
+/* ====== CENTERED HEADING ICONS ====== */
+section h2.heading-with-icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7a1e1e;
+    margin-bottom: 1rem;
+    text-align: center !important;
+}
+
+section h2.heading-with-icon::before,
+section h2.heading-with-icon::after {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #7a1e1e, #8b2f2f);
+    box-shadow: 0 2px 4px rgba(122, 30, 30, 0.2);
+    transition: all 0.3s ease;
+}
+
+section h2.heading-with-icon::before {
+    margin-right: 20px;
+}
+
+section h2.heading-with-icon::after {
+    margin-left: 20px;
+}
+
+/* 1. PATRIARCHAL NORMS*/
+
+section h2.heading-with-icon.icon-chains::before,
+section h2.heading-with-icon.icon-chains::after{
+  content:'⛓️'!important;
+  background: linear-gradient(135deg, #7a1e1e, #6b1a1a)!important;
+}
+
+section h2.heading-with-icon.icon-chains:hover::before,
+section h2.heading-with-icon.icon-chains:hover::after{
+  filter: brightness(0.7) sepia(1) hue-rotate(320deg);
+  animation: tarnish 1s ease-in-out;
+}
+
+@keyframes tarnish{
+  0%, 100%{transform: rotate(0deg);}
+  25%{transform: rotate(-3deg);}
+  75%{transform: rotate(3deg)}
+}
+
+/* 2. SCALES */
+section h2.icon-scales::before,
+section h2.icon-scales::after {
+    content: '⚖️';
+}
+
+section h2.icon-scales:hover::before {
+    transform: rotate(-3deg);
+}
+
+section h2.icon-scales:hover::after {
+    transform: rotate(3deg);
+}
+
+
+
+/* 3. CROSSED OUT MEGAPHONE */
+section h2.icon-megaphone{
+  position: relative;
+  cursor: pointer
+}
+
+section h2.icon-megaphone::before,
+section h2.icon-megaphone::after {
+    content: '📢' !important;
+    background: linear-gradient(135deg, #7a1e1e, #6b1a1a) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+section h2.icon-megaphone:hover::before {
+  animation: silenceMegaphone 1s ease-in-out !important;
+  box-shadow: 
+        0 2px 4px rgba(122, 30, 30, 0.2),
+        inset -15px 0px 0px 1px #dc143c!important;
+}
+
+section h2.icon-megaphone:hover::after {
+    box-shadow: 
+        0 2px 4px rgba(122, 30, 30, 0.2),
+        inset 15px 0px 0px 1px #dc143c !important;
+    animation: silenceMegaphone 1s ease-in-out !important;
+    animation-delay: 0.3s;
+}
+
+@keyframes silenceMegaphone{
+  0%{
+    transform: scale(1) rotate(0deg);
+    filter: grayscale(0%) opacity(1);
+  }30%{
+    transform: scale(1.05) rotate(-2deg); /* Shake?? */
+  }
+  60% {
+    transform: scale(0.95) rotate(2deg);  /* Shake other way :) */
+    filter: grayscale(50%) opacity(0.7);  /* Start fading :(*/
+  }
+    100% {
+    transform: scale(1) rotate(0deg);
+    filter: grayscale(80%) opacity(0.6);  /* Silenced D:*/
+  }
+}
+
+/* 4. RED PILL */
+section h2.icon-redpill::before,
+section h2.icon-redpill::after {
+    content: '💊';
+    background: linear-gradient(135deg, #7a1e1e, #a52a2a);
+}
+
+section h2.icon-redpill:hover::before,
+section h2.icon-redpill:hover::after {
+    box-shadow: 0 3px 8px rgba(165, 42, 42, 0.4);
+}
+
+/* 5. PHONE */
+section h2.icon-phone::before,
+section h2.icon-phone::after {
+    content: '📱';
+    background: linear-gradient(135deg, #7a1e1e, #5a1e1a);
+    animation: dramaticPulse 3s ease-in-out infinite;
+}
+
+section h2.icon-phone::after {
+    animation-delay: 2s;
+}
+
+@keyframes dramaticPulse {
+    0%, 70%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 2px 4px rgba(122, 30, 30, 0.2);
+        background: linear-gradient(135deg, #7a1e1e, #5a1e1a);
+    }
+    15% { 
+        transform: scale(1.15);
+        box-shadow: 0 6px 16px rgba(122, 30, 30, 0.6), 0 0 20px rgba(90, 30, 26, 0.4);
+        background: linear-gradient(135deg, #a52a2a, #7a1e1e);
+    }
+}
+
+/*Popup*/
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(122, 30, 30, 0.3);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  color: #7a1e1e;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body {
+  color: #4a1a1a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+.modal-body ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 5px;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #7a1e1e;
+}
+
+.modal-footer {
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-close {
+  background: linear-gradient(135deg, #7a1e1e, #a52a2a);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(122, 30, 30, 0.3);
+}
+
+.btn-close:hover {
+  background: linear-gradient(135deg, #a52a2a, #7a1e1e);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(122, 30, 30, 0.4);
+}
+
+.btn-secondary {
+  background: #f8f8f8;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #ffebee;
+  border-color: #ffcdd2;
+  color: #c62828;
+}
+
+/* Main content styling */
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-content h1 {
+  color: #7a1e1e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Checkbox for "Don't show again" */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #7a1e1e;
+}
+
+.qr-popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #333;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .qr-popup img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Overlay behind popup */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 900;
+  }
