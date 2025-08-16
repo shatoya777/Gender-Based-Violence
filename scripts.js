@@ -446,3 +446,16 @@ const qrBtn = document.getElementById('qr-btn');
     qrPopup.style.display = 'none';
     overlay.style.display = 'none';
   });
+
+function toggleReferences() {
+  var refs = document.getElementById('references');
+  var btn = document.getElementById('toggle-btn');
+  
+  if (refs.style.display === 'none' || refs.style.display === '') {
+      refs.style.display = 'block';
+      btn.innerHTML = 'Hide References';
+  } else {
+      refs.style.display = 'none';
+      btn.innerHTML = 'Show References';
+  }
+}
