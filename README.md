@@ -1,58 +1,45 @@
-# Digital Gender-Based Violence (DGBV) Awareness Web App
+🌍 Digital Gender-Based Violence Awareness Platform
+Interactive web application visualizing gender-based violence data across South Asia (India, Pakistan, Bangladesh) through custom maps and charts.
+✨ Features
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://YOUR_NETLIFY_LINK)
+🗺️ Interactive SVG Maps: Custom regional maps with hover tooltips showing violence statistics
+📊 Data Visualizations: Chart.js charts for psychological impacts and parliamentary representation
+📱 Responsive Design: Works on desktop and mobile
+⚡ Performance Optimized: Intersection Observer for lazy loading
+🛡️ User Safety: Quick exit button and privacy-conscious modal system
 
-A web-based platform designed to **educate, visualize, and raise awareness** about digital gender-based violence (DGBV) in South Asia (India, Pakistan, Bangladesh). The project features interactive maps, data visualizations, and curated resources to help users understand and combat online harassment and abuse.
+🛠️ Tech Stack
 
-## 🌐 Live Demo
+💻 JavaScript, HTML5, CSS3
+📈 Chart.js for data visualization
+🎨 Custom SVG maps with interactive regions
+💾 localStorage for user preferences
 
-Check out the live site here: [DGBV Awareness Web App](https://YOUR_NETLIFY_LINK)
+🚀 Quick Start
 
-## Table of Contents
+Clone the repository
+Open index.html in your browser or run a local server
+Navigate through the interactive maps and visualizations
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Data Sources](#data-sources)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+🔧 Key Technical Implementation
 
-## Overview
+💬 Dynamic Tooltips: Real-time region-specific data display on map hover
+⏳ Lazy Loading: Charts and maps initialize only when scrolled into view
+🌐 Multi-Map System: Unified tooltip system across three different country maps
+✨ Animation System: Smooth scroll-triggered animations and transitions
+🔄 State Management: User preferences stored locally with modal controls
 
-Digital gender-based violence includes cyberbullying, online harassment, revenge porn, and other forms of abuse disproportionately affecting women. This project aims to:
+📚 Data Sources
+Research compiled from government statistics (NCRB India, Pakistan/Bangladesh official data), academic papers, and NGO reports. All data is statically compiled - no external APIs required.
+🤝 Contributing
 
-- Highlight statistics and trends through **interactive maps and charts**.
-- Provide insights from **research, news, and social media sources**.
-- Raise awareness of cultural and legal aspects in South Asia.
+📊 Additional data sources and verification
+🌐 Language translations (Hindi, Urdu, Bengali)
+♿ Accessibility improvements
+📱 Mobile app development
 
-## Features
+📄 License
+MIT License
 
-- Hoverable map displaying country-specific DGBV statistics.
-- Bar and line charts visualizing trends over time.
-- Interactive sections for formal and informal sources.
-- Color themes: red/white/black or eggplant/purple/cream/black.
-
-## Technologies
-
-- **Frontend:** HTML, CSS, JavaScript, React
-- **Data Visualization:** Chart.js / D3.js
-- **Deployment:** Netlify / GitHub Pages
-
-## Data Sources
-
-Includes academic papers, news articles, social media content, and advocacy resources covering DGBV in India, Pakistan, and Bangladesh.
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/gbv-webapp.git
-
-# Navigate into the project folder
-cd gbv-webapp
-
-# Install dependencies
-npm install
+🆘 Crisis Resources: India (181), Pakistan (1098), Bangladesh (999)
+Built to raise awareness through accessible data visualization while demonstrating frontend development and research skills. 💪
