@@ -244,13 +244,13 @@
     { 
       id: 'crime-map-pakistan', 
       svgId: 'pakistan-map',
-      tooltipLabel: 'Gender Based Violence',
+      tooltipLabel: 'Cases of Gender Based Violence',
       
     },
     { 
       id: 'crime-map-bang', 
       svgId: 'bangladesh-map',
-      tooltipLabel: 'Domestic physical violence against women',
+      tooltipLabel: 'Percentage of Domestic physical violence against women',
       
     }
   ];

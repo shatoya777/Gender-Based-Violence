@@ -101,6 +101,13 @@ nav {
   padding: 0.75rem 1rem;
 }
 
+@media(max-width: 768px){
+  .nav-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .nav-brand {
   font-size: 1.5rem;
   font-weight: 700;
@@ -109,7 +116,7 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.0rem;
 }
 
 .nav-links a {
@@ -729,4 +736,26 @@ section h2.icon-phone::after {
     margin-bottom: 15px;
     padding: 10px;
     background-color: white;
+}
+
+/*Chart container for depresso espresso*/
+
+#symptom-chart-container {
+  width: 100%;
+  max-width: 600px;  /* looks nice on desktop */
+  height: 400px;     /* default chart height */
+  margin: 0 auto;    /* center it */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 600px) {
+  #symptom-chart-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  #symptom-chart-container {
+    height: 250px;
+  }
 }

@@ -191,73 +191,59 @@ main {
 }
 
 /* References Section */
-.references-toggle {
-    text-align: center;
-    margin: 3rem 0;
-}
-
-#toggle-references-btn {
+.references-section {
     background: linear-gradient(135deg, #7a1e1e, #5a1515);
-    color: #fff;
-    font-family: 'Arial', serif;
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-#toggle-references-btn:hover {
-    background: linear-gradient(135deg, #9a2e2e, #7a1e1e);
-    transform: translateY(-2px);
-}
-
-#references-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease, padding 0.4s ease;
-    background: white;
-    border-radius: 8px;
-    margin: 2rem auto;
-    max-width: 1000px;
-}
-
-#references-wrapper.expanded {
-    max-height: 5000px; /* Increased for all 71 references */
-    padding: 2rem;
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .references-title {
+    font-family: 'Soage', serif;
+    font-size: 2.5rem;
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 2rem;
-    color: #7a1e1e;
-    font-weight: bold;
+    color: #fef6f7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.references-list {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Dream Orphans', serif;
+    line-height: 1.8;
 }
 
 .reference-item {
-    margin-bottom: 1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffc4c4;
+    transition: background 0.3s ease;
+}
+
+.reference-item:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .reference-number {
     font-weight: bold;
-    color: #7a1e1e;
+    color: #ffc4c4;
     margin-right: 0.5rem;
 }
 
 .reference-link {
-    color: #0066cc;
-    text-decoration: none;
+    color: #ffebeb;
+    text-decoration: underline;
     word-break: break-all;
 }
 
 .reference-link:hover {
-    text-decoration: underline;
+    color: #ffc4c4;
 }
 
 /* Animations */
