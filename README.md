@@ -1,45 +1,57 @@
-🌍 Digital Gender-Based Violence Awareness Platform
-Interactive web application visualizing gender-based violence data across South Asia (India, Pakistan, Bangladesh) through custom maps and charts.
-✨ Features
+# **Gender-Based Violence Awareness Website**
 
-🗺️ Interactive SVG Maps: Custom regional maps with hover tooltips showing violence statistics
-📊 Data Visualizations: Chart.js charts for psychological impacts and parliamentary representation
-📱 Responsive Design: Works on desktop and mobile
-⚡ Performance Optimized: Intersection Observer for lazy loading
-🛡️ User Safety: Quick exit button and privacy-conscious modal system
+## **Overview**
 
-🛠️ Tech Stack
+This project is a responsive, multi-section educational website designed to raise awareness about gender-based violence (GBV). Built between May 2025 – July 2025, it uses HTML, CSS, and JavaScript to present interactive information and visual storytelling that encourages understanding and advocacy—particularly focused on South Asian regions.
 
-💻 JavaScript, HTML5, CSS3
-📈 Chart.js for data visualization
-🎨 Custom SVG maps with interactive regions
-💾 localStorage for user preferences
+## **Features**
 
-🚀 Quick Start
+Responsive design for accessibility across all devices.
 
-Clone the repository
-Open index.html in your browser or run a local server
-Navigate through the interactive maps and visualizations
 
-🔧 Key Technical Implementation
+Interactive data visualizations illustrating GBV statistics and trends.
 
-💬 Dynamic Tooltips: Real-time region-specific data display on map hover
-⏳ Lazy Loading: Charts and maps initialize only when scrolled into view
-🌐 Multi-Map System: Unified tooltip system across three different country maps
-✨ Animation System: Smooth scroll-triggered animations and transitions
-🔄 State Management: User preferences stored locally with modal controls
 
-📚 Data Sources
-Research compiled from government statistics (NCRB India, Pakistan/Bangladesh official data), academic papers, and NGO reports. All data is statically compiled - no external APIs required.
-🤝 Contributing
+Anchor-based navigation and smooth transitions for an intuitive user experience.
 
-📊 Additional data sources and verification
-🌐 Language translations (Hindi, Urdu, Bengali)
-♿ Accessibility improvements
-📱 Mobile app development
 
-📄 License
-MIT License
+Collaborative content layout, emphasizing clarity, readability, and inclusivity.
 
-🆘 Crisis Resources: India (181), Pakistan (1098), Bangladesh (999)
+
+Accessible design practices, including contrast, typography, and ARIA labeling.
+
+
+
+## **Technologies Used**
+
+Frontend: HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6)
+
+
+Tools: Chart.js (or D3.js if applicable), Google Fonts, Git/GitHub
+
+
+Focus Areas: Responsiveness, accessibility, and user engagement
+
+
+## **Role and Contributions**
+
+Role: Web Developer
+Designed and implemented a responsive, multi-page layout.
+
+
+Developed interactive charts and visual effects for storytelling.
+
+
+Collaborated on content accessibility and front-end presentation.
+
+
+Optimized navigation, performance, and overall user experience.
+
+## **Purpose**
+This project was created to combine technology and advocacy, using thoughtful design to promote awareness and empathy around gender-based violence.
+
+
+## **🆘 Crisis Resources:**
+
+India (181), Pakistan (1098), Bangladesh (999)
 Built to raise awareness through accessible data visualization while demonstrating frontend development and research skills. 💪
