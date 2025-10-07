@@ -4,6 +4,8 @@
 
 This project is a responsive, multi-section educational website designed to raise awareness about gender-based violence (GBV). It uses HTML, CSS, and JavaScript to present interactive information and visual storytelling that encourages understanding and advocacy—particularly focused on South Asian regions.
 
+View website: https://gbvresearch.netlify.app/
+
 ## **Features**
 
 Responsive design for accessibility across all devices.
