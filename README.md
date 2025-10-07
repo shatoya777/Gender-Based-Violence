@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-This project is a responsive, multi-section educational website designed to raise awareness about gender-based violence (GBV). Built between May 2025 – July 2025, it uses HTML, CSS, and JavaScript to present interactive information and visual storytelling that encourages understanding and advocacy—particularly focused on South Asian regions.
+This project is a responsive, multi-section educational website designed to raise awareness about gender-based violence (GBV). It uses HTML, CSS, and JavaScript to present interactive information and visual storytelling that encourages understanding and advocacy—particularly focused on South Asian regions.
 
 ## **Features**
 
